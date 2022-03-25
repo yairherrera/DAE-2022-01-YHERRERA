@@ -12,6 +12,6 @@ def enviar(request):
         'titulo': 'Respuesta',
         'diametro':request.POST['diametro'],
         'altura': request.POST['altura'],
-        'resultado':int(str(request.POST['altura']))*int(str(request.POST['diametro']))
+        'resultado':float(3.141592)*float(request.POST['altura'])*float(request.POST['diametro'])*float(request.POST['diametro']),
     }
     return render(request, 'encuesta/respuesta.html', context)
